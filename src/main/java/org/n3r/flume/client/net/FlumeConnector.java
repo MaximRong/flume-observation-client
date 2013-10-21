@@ -42,13 +42,6 @@ public class FlumeConnector {
 		connector.setConnectTimeoutMillis(connectTimeoutMillis);
 		switch (connectorType) {
 		case TextConnector:
-			// connector.getFilterChain().addLast(
-			// "codec",
-			// new ProtocolCodecFilter(new TextLineCodecFactory(Charset
-			// .forName("UTF-8"),
-			// LineDelimiter.WINDOWS.getValue(),
-			// LineDelimiter.WINDOWS.getValue())));
-
 			TextLineCodecFactory lineCodec = new TextLineCodecFactory(
 					Charset.forName("UTF-8"), LineDelimiter.WINDOWS.getValue(),
 					LineDelimiter.WINDOWS.getValue());
